@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Css/navigator.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+
+
+<body>
+
+    <style>
+        
+
+    </style>
+
+
+    <script>
+
+        function showDropdown(menuId) {
+            document.getElementById(menuId).style.display = "block";
+        }
+
+        function hideDropdown(menuId) {
+            document.getElementById(menuId).style.display = "none";
+        }
+
+
+    </script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown dropdown-hover" onmouseenter="showDropdown('dropdown-menu-acerca')" onmouseleave="hideDropdown('dropdown-menu-acerca')">
+                        @Html.ActionLink("Acerca", "Acerca", "Home")
+                        <ul id="dropdown-menu-acerca" class="dropdown-menu" style="display:none;">
+                            <li>@Html.ActionLink("Obejtivos", "Acerca", "Home")</li>
+                            <li>@Html.ActionLink("Justificacion", "Acerca", "Home")</li>
+                            <li>@Html.ActionLink("Tipo De Narracion", "Acerca", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-hover" onmouseenter="showDropdown('dropdown-menu-recurso')" onmouseleave="hideDropdown('dropdown-menu-recurso')">
+                        @Html.ActionLink("Recursos ", "RecursoAudio", "Home")
+                        <ul id="dropdown-menu-recurso" class="dropdown-menu" style="display:none;">
+                            <li>@Html.ActionLink("Videos Propios", "VideosPropios", "Home")</li>
+                            <li>@Html.ActionLink("Cortometrajes", "Cortometrajes", "Home")</li>
+                            <li>@Html.ActionLink("Peliculas", "Peliculas", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-hover" onmouseenter="showDropdown('dropdown-menu-discapacidad')" onmouseleave="hideDropdown('dropdown-menu-discapacidad')">
+                        @Html.ActionLink("Discapacidad", "DiscapacidadVisual", "Home")
+                        <ul id="dropdown-menu-discapacidad" class="dropdown-menu" style="display:none;">
+                            <li>@Html.ActionLink("Definicion", "significado", "Home")</li>
+                            <li>@Html.ActionLink("Causas", "causas", "Home")</li>
+                            <li>@Html.ActionLink("Tipos De Discapacidad", "tipos", "Home")</li>
+                            <li>@Html.ActionLink("Estrategias", "estrategias", "Home")</li>
+                            <li>@Html.ActionLink("Orientacion", "orientacion", "Home")</li>
+                            <li>@Html.ActionLink("Accesibilidad", "accesibilidad", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-hover" onmouseenter="showDropdown('dropdown-menu-herramientas')" onmouseleave="hideDropdown('dropdown-menu-herramientas')">
+                        @Html.ActionLink("Herramientas", "HerraTegno", "Home")
+                        <ul id="dropdown-menu-herramientas" class="dropdown-menu" style="display:none;">
+                            <li>@Html.ActionLink("Maquina de Perkins", "perkins", "Home")</li>
+                            <li>@Html.ActionLink("Jaws", "jaws", "Home")</li>
+                            <li>@Html.ActionLink("Brailleback", "braileback", "Home")</li>
+                            <li>@Html.ActionLink("Anillo lector", "anillo", "Home")</li>
+                            <li>@Html.ActionLink("Lentes inteligentes", "gafas", "Home")</li>
+                            <li>@Html.ActionLink("Sintesis", "sintesis", "Home")</li>
+
+
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-hover" onmouseenter="showDropdown('dropdown-menu-tecnicas')" onmouseleave="hideDropdown('dropdown-menu-tecnicas')">
+                        @Html.ActionLink("Tecnicas", "AyudasTecnicas", "Home")
+                        <ul id="dropdown-menu-tecnicas" class="dropdown-menu" style="display:none;">
+                            <li>@Html.ActionLink("Codigo Braulle", "codigo", "Home")</li>
+                            <li>@Html.ActionLink("Escritura", "escritura", "Home")</li>
+                            <li>@Html.ActionLink("Abaco", "abaco", "Home")</li>
+                            <li>@Html.ActionLink("Baston", "baston", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-hover" onmouseenter="showDropdown('dropdown-menu-actividades')" onmouseleave="hideDropdown('dropdown-menu-actividades')">
+                        @Html.ActionLink("Actividades", "Entretenimiento", "Home")
+                        <ul id="dropdown-menu-actividades" class="dropdown-menu" style="display:none;">
+                            <li>@Html.ActionLink("Juegos", "juegos", "Home")</li>
+                            <li>@Html.ActionLink("Ahorcado", "Ahorcado", "Home")</li>
+                            <li>@Html.ActionLink("Memoria", "Cartas", "Home")</li>
+                            <li>@Html.ActionLink("Video1", "Video1", "Home")</li>
+                            <li>@Html.ActionLink("Leccion", "leccion", "Home")</li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <div class="searcher">
+                    <div class="input_search_container" id="input_search_container">
+                        <input type="text" class="input_search" id="input_search" placeholder="¿Qué deseas buscar?">
+                        <button class="icon_search" id="icon_search">Buscar</button>
+                    </div>
+                    <ul class="suggestion_box" id="suggestion_box">
+                        <li>algo</li>
+                        <li>algo 2</li>
+                    </ul>
+                    <div class="search_container" id="search_container"></div>
+                </div>
+
+
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Derechos Reservador Creadora: Tersa Mirian Santamaria Lopez</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+<script src="~/Scripts/navigator.js"></script>
+</html>

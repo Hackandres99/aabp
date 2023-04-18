@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+   
+    .jumbotron .row {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .col-md-4:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+        
+    }
+    .col-md-5:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+      
+    }
+
+    .col-md-4  {
+        border-radius: 20px;
+    }
+    .col-md-5 {
+        border-radius: 20px;
+    }
+
+    .jumbotron .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .jumbotron {
+        background-color: #337ab7;
+        margin-top: 10px;
+    }
+
+     .jumbotron h1, p, h2 {
+            color: black;
+        }
+
+    .btn:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .btn-azul {
+        background-color: #337ab7;
+        color: black;
+    }
+
+    
+</style>
+
+<div class="jumbotron"  style="border-radius: 20px; ">
+    <div class="row">
+        <div class="col-md-6" >
+            <img src="~/src/abre tus ojos.png" alt="Descripción de la imagen" width="300" height="300">
+        </div>
+        <div class="col-md-6">
+            <h1>ABRE TUS OjOs</h1>
+            
+            <p class="lead" style="text-align: justify;">
+                Es una plataforma diseñada como recurso educativo abierto (REA) para promover el
+                uso de medios audiovisuales como cortometrajes, películas y videos con el fin de sensibilizar a la
+                población sobre la discapacidad visual.
+            </p>
+            <p style="text-align: center;">  @Html.ActionLink("Aprender Mas Sobre Este Proyecto >>", "Acerca", "Home", null, new { @class = "btn btn-default" }) </p>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-left: -40px;">
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px">
+        <div style="text-align: center;font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Recursos Educativos Audiovisuales </h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/audiovisuales.jpg" alt="Descripción de la imagen" width="300" height="300" style="border-radius : 50%">
+        </div>
+        <p style="text-align: justify;  font-family: 'Times New Roman'; font-weight: 700;">
+            En esta seccion encontraras una variedad de videos autonomos y extraidos de la web, asi como peliculas que nos 
+            ayduaran a reflexionar y entender sobre la discapacidad visual.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "RecursoAudio", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Discapacidad <br>  Visual </h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/DiscapacidadVisual.png" alt="Descripción de la imagen" width="300" height="300"  style="border-radius : 50%">
+        </div>
+        <p style="text-align: justify;  font-family: 'Times New Roman'; font-weight: 700;">
+            La discapacidad visual es una condición que afecta a la capacidad de una persona para ver con claridad,en esta 
+            seccion abordaremos todo referente a esta condicion que afectan a muchas persoans.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "DiscapacidadVisual", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Herramientas <br> Tegnológicas</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/herramientas-digitales.jpg" alt="Descripción de la imagen" width="300" height="300"  style="border-radius : 50%">
+        </div>
+        <p style="text-align: justify; font-family: 'Times New Roman'; font-weight: 700;">
+            Aqui podras encontrar disferentes herramientas que ayudan a mejorar la vida cotidiana de una persona con discapacidad
+            visual asi mismo se te dara toda la informacion de dichos herrameintas.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "HerraTegno", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>
+<div class="row" style="margin-left: 180px;">
+    <div class="col-md-5" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Ayudas <br> Técnicas</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/AyudaTecnica.jpg" alt="Descripción de la imagen" width="300" height="300"  style="border-radius : 50%">
+        </div>
+        <p style="text-align: justify; font-family: 'Times New Roman'; font-weight: 700;">
+            Existen técnicas que pueden ayudar a las personas a superar  limitaciones visuales. En esta sección 
+            exploraremos algunas de estas ayudas técnicas y cómo pueden ser útiles para mejorar la calidad de vida.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "AyudasTecnicas", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-5" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Actividades <br>Educativas</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/ActividadesEducativas.jpg" alt="Descripción de la imagen" width="300" height="300"  style="border-radius : 50%">
+        </div>
+        <p style="text-align: justify; font-family: 'Times New Roman'; font-weight: 700;">
+            Las personas con discapacidad visual pueden enfrentar obstáculos en el ámbito educativo, pero existen numerosas 
+            estrategias y ayudas técnicas que pueden ayudar a superar estos desafíos y lograr un aprendizaje efectivo.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "Entretenimiento", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+</div>

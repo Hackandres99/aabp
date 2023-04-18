@@ -1,0 +1,142 @@
+﻿@{
+    ViewBag.Title = "Entretenimiento";
+}
+
+<style>
+
+    .jumbotron .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-md-4:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+
+    .col-md-5:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+
+    .col-md-4 {
+        border-radius: 20px;
+    }
+
+    .col-md-5 {
+        border-radius: 20px;
+    }
+
+    .jumbotron .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .jumbotron {
+        background-color: #337ab7;
+        margin-top: 10px;
+    }
+
+        .jumbotron h1, p, h2 {
+            color: black;
+        }
+
+    .btn:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .btn-azul {
+        background-color: #337ab7;
+        color: black;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+</style>
+
+
+<h2 style="text-align: center; border-radius: 20px; margin-bottom: 30px; background-color: #337ab7; padding: 5px; font-size: 72px; font-family: 'Times New Roman' ;">Actividades Educativas</h2>
+
+
+<div class="row" style="margin-left: -40px;">
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px">
+        <div style="text-align: center;font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Juegos para casa</h2>
+            <div style="text-align: center;">
+                <img src="~/src/juegos.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+            </div>
+
+            <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "juegos", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+        </div>
+
+    </div>
+
+
+
+     <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px">
+         <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+             <h2 class="thumbnail_title">Juego del Ahorcado</h2>
+
+             <div style="text-align: center;">
+                 <img src="~/src/ahorcado.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+             </div>
+
+             <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "Ahorcado", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+         </div>
+    </div>
+
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Juego de Memoria</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/memoria.jpg" alt="Descripción de la imagen" width="150" height="150" style="border-radius : 50%">
+        </div>
+       
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "Cartas", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>
+
+
+
+<div class="row" style="margin-left: 180px;">
+    <div class="col-md-5" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px">
+    <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+        <h2 class="thumbnail_title">Video</h2>
+    </div>
+    <div style="text-align: center; margin-bottom: 20px">
+        <img src="~/src/VideosPropios.jpg" alt="Descripción de la imagen" width="150" height="150" style="border-radius : 50%">
+    </div>
+
+    <p style="text-align: center;">  @Html.ActionLink("Aprender Mas >>", "Video1", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+</div>
+
+
+
+
+    <div class="col-md-5" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 class="thumbnail_title">Evaluación</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 20px">
+            <img src="~/src/evaluacion.png" alt="Descripción de la imagen" width="150" height="150" style="border-radius : 50%">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "leccion", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+

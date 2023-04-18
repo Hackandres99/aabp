@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "Herramientas";
+}
+
+<style>
+    img {
+        border-radius: 50%;
+    }
+
+    .jumbotron .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .jumbotron .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .col-md-4 {
+        border-radius: 20px;
+    }
+
+
+
+    .jumbotron {
+        background-color: #FFF2CC;
+        margin-top: 10px;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .btn-azul {
+        background-color: #337ab7;
+        color: black;
+    }
+
+    .btn:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .col-md-4:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+
+  
+</style>
+
+
+<h2 style="text-align: center; border-radius: 20px; margin-bottom: 30px; background-color: #337ab7; padding: 5px; font-size: 72px; font-family: 'Times New Roman' ;">Herramientas Tegnológicas</h2>
+
+
+<div class="row" style="margin-left: -50px;">
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Máquina de Perkins</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/perkins.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "perkins", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+
+
+    </div>
+
+
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">JAWS</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/jaws.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "jaws", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">BrailleBack</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/braile.png" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "braileback", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>
+
+<div class="row" style="margin-left: -50px;">
+
+    <div class="col-md-4" style="background-color:  #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center;  font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Anillo Lector </h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/anillo.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "anillo", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+
+
+    </div>
+
+
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center;  font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Lentes Inteligentes </h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/gafas.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "gafas", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Síntesis De Voz</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/sintesis.png" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "sintesis", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>

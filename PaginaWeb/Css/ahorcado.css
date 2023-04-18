@@ -1,0 +1,28 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#ahorcado {
+    display: flex;
+    justify-content: center;
+}
+
+#palabraAdivinada, #letrasIncorrectas {
+    margin-top: 20px;
+}
+
+#opciones {
+    margin-top: 20px;
+}
+
+    #opciones input {
+        margin-right: 10px;
+    }
+
+    #opciones button {
+        margin-top: 10px;
+    }

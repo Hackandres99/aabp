@@ -1,0 +1,353 @@
+﻿
+@{
+    ViewBag.Title = "leccion";
+}
+<style>
+    /* Estilos generales */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 20px 0;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Estilos específicos para las opciones */
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    /* Estilos para los resultados */
+    #resultado {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-size: 24px;
+    }
+
+
+    #myBtn {
+        font-size: 24px; /* Tamaño de fuente personalizado */
+        padding: 10px 20px; /* Tamaño de botón personalizado */
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #myBtn:hover {
+        transform: scale(1.2);
+   }
+
+
+    .alerta-centrada {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        background-color: pink;
+        color: red;
+        font-weight: bold;
+        border-radius: 10px;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+        opacity: 1;
+    }
+
+
+</style>
+
+<h2 style="text-align: center; border-radius: 20px; margin-bottom: 30px; margin-top:50px; background-color: #337ab7; padding: 5px; font-size: 72px; font-family: 'Times New Roman' ;">Prueba De Conocimientos</h2>
+
+<html>
+<
+
+<body>
+    <h1>Pon a prueba lo aprendido</h1>
+    <form>
+        <h2>Pregunta 1:</h2>
+        <p>¿Qué es discapacidad visual?</p>
+        <label>
+            <input type="radio" name="pregunta1" value="a" onclick="verificarContestadas()"> a. Es la condición física que provoca la disminución de la capacidad de ver
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta1" value="b" onclick="verificarContestadas()"> b. Es la condición logica que provoca la disminución de la capacidad de ver
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta1" value="c" onclick="verificarContestadas()"> c. Es la condición mental que provoca la disminución de la capacidad de ver
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta1" value="d" onclick="verificarContestadas()"> d. Es la condición imaginaria que provoca la disminución de la capacidad de ver
+        </label><br>
+
+        <hr>
+        <h2>Pregunta 2:</h2>
+        <p>¿Cual es el objetivo principal de este proyecto?</p>
+        <label>
+            <input type="radio" name="pregunta2" value="a" onclick="verificarContestadas()"> a. Crear recursos educativos abiertos (REA)
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta2" value="b" onclick="verificarContestadas()"> b. Crear recursos educativos cerrados (REC)
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta2" value="c" onclick="verificarContestadas()"> c. Crear cursos educativos abiertos (CEA)
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta2" value="d" onclick="verificarContestadas()"> d. Invertir recursos educativos abiertos (REA)
+        </label><br>
+        <hr>
+
+
+        <h2>Pregunta 3:</h2>
+        <p>Eliga una causa que provoca la discapacidad visual </p>
+        <label>
+            <input type="radio" name="pregunta3" value="a" onclick="verificarContestadas()"> a. Fiebre
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta3" value="b" onclick="verificarContestadas()"> b. Catarata
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta3" value="c" onclick="verificarContestadas()"> c. Gripe
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta3" value="d" onclick="verificarContestadas()"> d. Tifoidea
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 4:</h2>
+        <p>¿Qué es el Codigo Braille? </p>
+        <label>
+            <input type="radio" name="pregunta4" value="a" onclick="verificarContestadas()"> a. Es un ecosistema de escritura táctil utilizado por personas con discapacidad visual para leer y escribir.
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta4" value="b" onclick="verificarContestadas()"> b. Es un palabra de escritura táctil utilizado por personas con discapacidad visual para leer y escribir.
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta4" value="c" onclick="verificarContestadas()"> c. Es un sistema de escritura táctil utilizado por personas con discapacidad visual para leer y escribir.
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta4" value="d" onclick="verificarContestadas()"> d. Es un numero de escritura táctil utilizado por personas con discapacidad visual para leer y escribir.
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 5:</h2>
+        <p>¿Qué es el Baston?</p>
+        <label>
+            <input type="radio" name="pregunta5" value="a" onclick="verificarContestadas()"> a. Es una herramienta de movilidad que ayuda a las personas con discapacidad visual
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta5" value="b" onclick="verificarContestadas()"> b. Es una silla de movilidad que ayuda a las personas con discapacidad visual
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta5" value="c" onclick="verificarContestadas()"> c. Es una herramienta de volar que ayuda a las personas con discapacidad visual
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta5" value="d" onclick="verificarContestadas()"> d. Es una herramienta de movilidad que ayuda a las personas con discapacidad psicologica
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 6:</h2>
+        <p>De los tipos de Batones selecione el correcto </p>
+        <label>
+            <input type="radio" name="pregunta6" value="a" onclick="verificarContestadas()"> a. Baston Negro
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta6" value="b" onclick="verificarContestadas()"> b. Baston Blanco
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta6" value="c" onclick="verificarContestadas()"> c. Baston Gris
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta6" value="d" onclick="verificarContestadas()"> d. Baston Cafe
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 7:</h2>
+        <p>¿Qué es el Punzon y Regleta Braille?</p>
+        <label>
+            <input type="radio" name="pregunta7" value="a" onclick="verificarContestadas()"> a. Utencilios para comer
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta7" value="b" onclick="verificarContestadas()"> b. Son herramientas de escritura
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta7" value="c" onclick="verificarContestadas()"> c. Es un Baston
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta7" value="d" onclick="verificarContestadas()"> d. Ninguna de las anterioires
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 8:</h2>
+        <p>Eliga una Herramienta Tegnolocia que ayudan a las persoans con discapacidad visual </p>
+        <label>
+            <input type="radio" name="pregunta8" value="a" onclick="verificarContestadas()"> a. Libros
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta8" value="b" onclick="verificarContestadas()"> b. Maquina de Newton
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta8" value="c" onclick="verificarContestadas()"> c. Máquina de Perkins
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta8" value="d" onclick="verificarContestadas()"> d. Musica
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 9:</h2>
+        <p>¿Cuantas teclas posee la maquina de Perkins </p>
+        <label>
+            <input type="radio" name="pregunta9" value="a" onclick="verificarContestadas()"> a. 6
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta9" value="b" onclick="verificarContestadas()"> b. 5
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta9" value="c" onclick="verificarContestadas()"> c. 7
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta9" value="d" onclick="verificarContestadas()"> d. 8
+        </label><br>
+        <hr>
+
+        <h2>Pregunta 10:</h2>
+        <p>¿Qué es un JAWS ? </p>
+        <label>
+            <input type="radio" name="pregunta10" value="a" onclick="verificarContestadas()"> a. Es el lector de pantalla más popular del mundo.
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta10" value="b" onclick="verificarContestadas()"> b. Es el lector de pantalla menos popular del mundo.
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta10" value="c" onclick="verificarContestadas()"> c. Es el lector de fotos más popular del mundo.
+        </label><br>
+        <label>
+            <input type="radio" name="pregunta10" value="d" onclick="verificarContestadas()"> d. Es el lector de dinero más popular del mundo.
+        </label><br>
+        <hr>
+        <!-- Preguntas restantes... -->
+        <button id="myBtn" type="button" onclick="calificar();">Calificar</button>
+    </form>
+    <div id="resultado"></div>
+    <div id="alerta" class="alerta-centrada" style="display: none;">
+        Por favor, contesta todas las preguntas antes de calificar.
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        function calificar() {
+            // Verificar si se han contestado todas las preguntas
+            var todasContestadas = true;
+            for (var i = 1; i <= 10; i++) {
+                var radios = document.getElementsByName('pregunta' + i);
+                var contestada = false;
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        contestada = true;
+                        break;
+                    }
+                }
+                if (!contestada) {
+                    todasContestadas = false;
+                    break;
+                }
+            }
+
+            
+            if (!todasContestadas) {
+                var alertaDiv = document.getElementById('alerta');
+                alertaDiv.style.display = 'block';
+                setTimeout(function () {
+                    
+                    alertaDiv.style.display = 'none';
+                    
+                }, 3000); // Ocultar el mensaje después de 3 segundos
+                return;
+            }
+            setTimeout(function () {
+                alerta.style.opacity = '0';
+            }, 3000);
+
+            // Obtener respuestas del usuario
+            var respuestas = [];
+            for (var i = 1; i <= 10; i++) {
+                var radios = document.getElementsByName('pregunta' + i);
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        respuestas.push(radios[j].value);
+                        break;
+                    }
+                }
+            }
+
+            // Calificar respuestas
+            var calificacion = 0;
+            var respuestasCorrectas = ['a', 'a', 'b', 'c', 'a', 'b', 'b', 'c', 'a', 'a'];
+            for (var i = 0; i < respuestas.length; i++) {
+                if (respuestas[i] === respuestasCorrectas[i]) {
+                    calificacion++;
+                }
+            }
+
+            // Mostrar resultado
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = 'Tu calificación es: ' + calificacion + ' de 10.';
+            if (calificacion >= 7) {
+                resultadoDiv.style.color = 'green';
+                resultadoDiv.style.backgroundColor = 'lightgreen';
+            } else {
+                resultadoDiv.style.color = 'red';
+                resultadoDiv.style.backgroundColor = 'pink';
+            }
+
+            // Bloquear selección de respuestas
+            var radios = document.querySelectorAll('input[type=radio]');
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].disabled = true;
+            }
+
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

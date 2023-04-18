@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Discapacidad";
+}
+
+<style>
+    img {
+        border-radius: 50%;
+    }
+
+    .jumbotron .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .jumbotron .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .col-md-4 {
+        border-radius: 20px;
+    }
+
+
+
+    .jumbotron {
+        background-color: #FFF2CC;
+        margin-top: 10px;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .btn-azul {
+        background-color: #337ab7;
+        color: black;
+    }
+
+    .btn:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .col-md-4:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+
+    p {
+        color: #337ab7;
+    }
+</style>
+
+
+<h2 style="text-align: center; border-radius: 20px; margin-bottom: 30px; background-color: #337ab7; padding: 5px; font-size: 72px; font-family: 'Times New Roman' ;">Discapacidad Visual</h2>
+
+
+<div class="row" style="margin-left: -50px;">
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px; margin-bottom: 10px;">
+        <div style="text-align: center;font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">¿Definición?</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/definicion.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+       
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "significado", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+
+
+    </div>
+
+
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Causas</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/causas.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+        
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "causas", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center;font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Tipos</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/tipos.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+        
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "tipos", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>
+
+<div class="row" style="margin-left: -50px;">
+
+    <div class="col-md-4" style="background-color:  #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Estrategias</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/estrategias.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+        
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "estrategias", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+
+
+    </div>
+
+
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Orientacion</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/orientacion.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+        
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "orientacion", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Accesibilidad</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/accesibilidad.jpg" alt="Descripción de la imagen" width="150" height="150" style="margin-bottom: 20px;">
+        </div>
+     
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "accesibilidad", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>

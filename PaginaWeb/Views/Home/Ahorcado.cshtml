@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewBag.Title = "Ahorcado";
+}
+<h2 style="text-align: center; border-radius: 20px; margin-bottom: 30px; background-color: #337ab7; padding: 5px; font-size: 72px; font-family: 'Times New Roman' ;">Ahorcado</h2>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego del Ahorcado</title>
+    <meta charset="UTF-8">
+
+    <style>
+        /* Estilos para centrar el juego */
+    
+
+       
+
+        h1 {
+            font-size: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+            button:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+        #word-container {
+            font-size: 24px;
+            margin-bottom: 20px;
+
+        }
+
+        #guesses-left {
+            font-size: 18px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .alert {
+            padding: 10px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="raw text-center" >
+        <h1>Juego del Ahorcado</h1>
+        <p>Intenta adivinar la palabra seleccionada</p>
+        <img id="hangman-image" src="~/src/ahorcado0.png">
+        <div id="word-container"></div>
+        <input type="text" id="guess-input">
+        <button id="guess-button" onclick="checkGuess()">Adivinar</button>
+        <button onclick="restartGame()">Reiniciar</button>
+
+        <p id="guesses-left"></p>
+    </div>
+    <script>
+        var words = ["discapacidad", "baston", "perkins", "codigo", "braille"];
+        var selectedWord = words[Math.floor(Math.random() * words.length)];
+        var guesses = 6;
+        var correctGuesses = [];
+        var wordContainer = document.getElementById("word-container");
+        var guessesLeft = document.getElementById("guesses-left");
+
+
+
+
+        function showWord() {
+            for (var i = 0; i < selectedWord.length; i++) {
+                if (correctGuesses.includes(selectedWord[i])) {
+                    wordContainer.innerHTML += selectedWord[i] + " ";
+                } else {
+                    wordContainer.innerHTML += "_ ";
+                }
+            }
+        }
+
+        function checkGuess() {
+
+
+
+            var guess = document.getElementById("guess-input").value;
+            if (guesses === 6) {
+                var hangmanImage = document.getElementById("hangman-image");
+                hangmanImage.src = `/src/ahorcado0.png`;
+            }
+
+            if (guess.length === 1) { // Letra
+                if (selectedWord.includes(guess)) {
+                    correctGuesses.push(guess);
+                    wordContainer.innerHTML = "";
+                    showWord();
+                    if (correctGuesses.length === selectedWord.length) {
+                        alert("¡Felicidades, ganaste!");
+                        
+                    }
+                } else {
+                    guesses--;
+                    guessesLeft.innerHTML = "Intentos restantes: " + guesses;
+                    var hangmanImage = document.getElementById("hangman-image");
+                    hangmanImage.src = `/src/ahorcado${(-guesses + 6)}.png`;
+
+                    if (guesses === 0) {
+                        setTimeout(alert("¡Lo siento, has perdido! La palabra era " + selectedWord), 3000);
+                        document.getElementById("word-container").innerHTML = selectedWord;
+                        document.getElementById("guess-button").disabled = true;
+
+                    }
+
+                }
+            } else if (guess.length > 1) { // Palabra
+                if (guess === selectedWord) {
+                    alert("¡Felicidades, ganaste!");
+                 
+
+
+                } else {
+                    guesses--;
+                    guessesLeft.innerHTML = "Intentos restantes: " + guesses;
+                    var hangmanImage = document.getElementById("hangman-image");
+                    hangmanImage.src = `/src/ahorcado${(-guesses + 6)}.png`;
+
+
+                    if (guesses === 0) {
+
+
+
+                        setTimeout(alert("¡Lo siento, has perdido! La palabra era " + selectedWord), 3000);
+                        document.getElementById("word-container").innerHTML = selectedWord;
+                       
+                        document.getElementById("guess-button").disabled = true;
+
+                    }
+                }
+            }
+
+            document.getElementById("guess-input").value = "";
+
+        }
+       
+
+        showWord();
+        guessesLeft.innerHTML = "Intentos restantes: " + guesses;
+
+        function restartGame() {
+            
+            location.reload();
+            document.getElementById("guess-button").disabled = false;
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
+

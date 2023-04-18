@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Recursos";
+}
+ 
+<style>
+    img {
+        border-radius: 50%;
+    }
+    .jumbotron .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .jumbotron .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+        
+    }
+    .col-md-4 {
+        border-radius: 20px;
+    }
+
+
+
+    .jumbotron {
+        background-color: #FFF2CC;
+        
+        margin-top: 10px;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .btn-azul {
+        background-color: #337ab7;
+        color: black;
+    }
+
+    .btn:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .col-md-4:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+
+   
+    
+</style>
+
+
+<h2 style="text-align: center; border-radius: 20px; margin-bottom: 30px; background-color: #337ab7; padding: 5px; font-size: 72px; font-family: 'Times New Roman' ;">Recursos Audiovisuales</h2>
+
+
+<div class="row" style="margin-left: -50px;">
+
+    <div class="col-md-4" style="background-color:  #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center;font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Videos Propios</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/VideosPropios.jpg" alt="Descripción de la imagen" width="300" height="300">
+        </div>
+        <p style="text-align: justify; font-family: 'Times New Roman'; font-weight: 700;" >
+            Aquí podrás encontrar una amplia variedad de videos creados por nuestro equipo, explora nuestra 
+            página y descubre todo lo que tenemos para ofrecerte.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "VideosPropios", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+
+
+    </div>
+
+
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: 5px;">
+        <div style="text-align: center; font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Cortometrajes</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/corometraje.jpg" alt="Descripción de la imagen" width="300" height="300">
+        </div>
+        <p style="text-align: justify; font-family: 'Times New Roman'; font-weight: 700;">
+            En nuestra sección de cortometrajes  podrás encontrar una selección de obras audiovisuales de corta
+            duración, que buscan generar una reflexión sobre este tema.
+        </p>
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "Cortometrajes", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+
+    <div class="col-md-4" style="background-color: #FFF2CC; border: 1px solid #ccc; padding: 20px; margin-right: -50px;">
+        <div style="text-align: center;font-family: 'Times New Roman'; font-weight: 700; ">
+            <h2 style="font-weight: 700;">Películas</h2>
+        </div>
+        <div style="text-align: center;">
+            <img src="~/src/cine.jpg" alt="Descripción de la imagen" width="300" height="300">
+        </div>
+        <p style="text-align: justify; font-family: 'Times New Roman'; font-weight: 700;">
+            En esta sección encontrarás una selección de películas que abordan este tema de una manera
+            sensible y realista, con el objetivo de sensibilizar a la población.
+
+        <p style="text-align: center;">  @Html.ActionLink("Aprender Más >>", "Peliculas", "Home", null, new { @class = "btn btn-default btn-azul" }) </p>
+    </div>
+</div>
